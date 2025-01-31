@@ -1,0 +1,2297 @@
+1)Alpahabet or not, vowels and symbols
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		char ch = s.next().charAt(0);
+		if(Character.isLetter(ch)){
+		    System.out.println("Alphabet");
+		    char low = Character.toLowerCase(ch);
+		    if(String.valueOf(ch).matches ("[aeiou]")){
+		        System.out.println("Vowels");
+		    }
+		}
+		else if(Character.isDigit(ch)){
+		    System.out.println("Number");
+		}
+		else{
+		    System.out.println("Symbols");
+		}
+	}
+}
+
+2) multiple times runs
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	for(; ;){
+	    System.out.println("Dejassha");	
+	}
+	}
+}
+
+3) Leap year or not 
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+        int year = s.nextInt();
+        if((year % 4 ==0) || (year % 400 == 0)  && year % 100 != 0){
+            System.out.println("The given number is an leap year");
+        }
+        else{
+            System.out.println("The given number is not an leap year");
+        }
+	}
+}
+
+4)Sums of digits don't use looping 
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+        int a = s.nextInt();
+        int b ;
+        if(a > 9){
+            b = (a % 9 == 0) ? 9 : a % 9;
+        }
+        else{
+            b = a;
+        }
+        System.out.println(b);
+	}
+}
+
+5) A fruit seller buy a tozen of banana at Rs.X.He sells 1 banana at Rs.Y.
+Write a program to determine the profit or loss in Rs. for the fruit seller
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+        float a = s.nextFloat();
+        float b = s.nextFloat();
+        float c = b * 12;
+        float d = a - c;
+        if(c > a){
+            System.out.println("profit" +d);
+        }
+        else{
+            System.out.println("Loss" +d);
+        }
+        
+	}    
+}
+
+6)Ask a user for their birth year encoded as two digits (like "62") and for the current year also encoded as two digits (like "99"). write a program to find users current age in year
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+        int birth_year= s.nextInt();
+        int current_year = s.nextInt();
+        int normal = b - a;
+        int century = (100 - birth_year) + current_year;
+        if(birth_year > current_year){
+            System.out.System.out.println("");
+        }
+        else{
+            
+        }
+	}    
+}
+
+7) write a program to calculate theno. of years, weaks and remaining days for given total days
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+        long totaldays = s.nextLong();
+        long years = totaldays / 365;
+        long remains = totaldays % 365;
+        long weaks = remains / 7;
+        long days = remains % 7;
+        
+        System.out.println("Years:" +years);
+        System.out.println("Weaks:" +weaks);
+        System.out.println("Days:" + days);
+	}    
+}
+
+8) write program to read the total seconds & print seconds in time format.
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+        int totalsec = s.nextInt(); 
+        int hours = totalsec / 3600;
+        int remains = totalsec % 3600;
+        int mins = remains / 60;
+        int sec= remains % 60;
+        
+        System.out.println("Hours:" +hours);
+        System.out.println("Minutes:" +mins);
+        System.out.println("Seconds:" +sec);
+	}    
+}
+
+
+
+
+DAY-2
+
+
+
+
+1) print even number and odd number
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		for(int i =1; i<=10; i++){
+		    if(i % 2 ==0){
+		        System.out.print(i + " ");
+		    }
+		}
+		System.out.println();
+		for(int i =1; i<=10; i++){
+		    if(i % 2 !=0){
+		        System.out.print(i + " ");
+		    }
+		}
+	}
+}
+
+2) Factorial
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int n = scan.nextInt();
+		int fact = 1;
+		for(int i = 1; i<=n; i++){
+		    fact = fact * i;
+		}
+		System.out.println(fact);
+	}
+}
+
+3)multipilication for the given number
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int n = scan.nextInt();
+		for(int i = 1; i<=10; i++){
+		    System.out.println(n + "x"  + i + "= " + i*n);
+		}
+	}
+}
+
+4) Fabonacci Series 
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int n = scan.nextInt();
+	    int first_number = 0, second_number = 1;
+		for(int i = 1; i<=n; i++){
+		    System.out.print(first_number + ",");
+		    int next = first_number + second_number;
+		    first_number = second_number;
+		    second_number = next;
+		}
+	}
+}
+
+5)Reverse a number
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int n = scan.nextInt();
+	    int r, p= 0;
+	    while(n > 0){
+	        r = n % 10;
+	        p = p * 10 + r;
+	        n = n / 10;
+	    }
+	    System.out.println(p);
+	}
+}
+
+6)count the number of digits
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int n = scan.nextInt();
+	    int count = 0;
+	    while(n > 0){
+	        n = n / 10;
+	        count++;
+	    }
+	    System.out.println(count);
+	}
+}
+
+7) palindrome
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int n = scan.nextInt();
+	    int r, p= 0, temp=n;
+	    while(n > 0){
+	        r = n % 10;
+	        p = p * 10 + r;
+	        n = n / 10;
+	    }
+	    //System.out.println(p);
+	    if(p == temp){
+	        System.out.println("It is an palindrom");
+	    }
+	    else{
+	        System.out.println("It is not an palindrom");
+	    }
+	}
+}
+
+8)Add only the even number from the given number
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int n = scan.nextInt();
+	    int r, p= 0;
+	    while(n > 0){
+	        r = n % 10;
+	        if(r % 2 == 0){
+	            p = p + r;
+	        }
+	        n = n / 10;
+	    }
+	    System.out.println(p);
+	}
+}
+
+9) Strong Number
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int n = scan.nextInt();
+	    int temp, rem,sum= 0;
+	    temp = n;
+	    while(n > 0){
+	        rem = n % 10;
+	        int fact = 1;
+	        for(int i = 1; i <= rem; i++){
+	            fact = fact * i;
+	        }
+	        sum = sum + fact;
+	        n = n / 10;
+	    }
+	     if(sum == temp){
+	        System.out.println("It is an strong number");
+	    }
+	    else{
+	        System.out.println("It is not an strong number");
+	    }
+	}
+}
+
+10) Armstrong
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int n = scan.nextInt();
+	    int temp, rem, sum = 0;
+	    temp = n;
+	    while( n > 0){
+	        rem = n % 10;
+	        sum = sum + (int)Math.pow(rem, 3);
+	        n = n / 10;
+	    }
+	     if(sum == temp){
+	        System.out.println("It is an armstrong number");
+	    }
+	    else{
+	        System.out.println("It is not an armstrong number");
+	    }
+	}
+}
+
+
+11) Automorphic number
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int n = scan.nextInt();
+	    int square = n * n;
+	    while(n > 0 ){
+	        if(square % 10 != n % 10){
+	            System.out.println("It is  not an Automorphic number");
+	            break;
+	        }
+	        square = square / 10;
+	        n = n / 10;
+	        if(n == 0){
+	            System.out.println("It is an Automorphic number");
+	        }
+	    }
+	}
+}
+
+12) Adamp number
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int n = scan.nextInt();
+	    int square = n*n, rem, p = 0, s = 0;
+	    System.out.println("Square Number:"+square);
+	    while(square > 0){
+	        rem = square % 10;
+	        p = p * 10 + rem;
+	        square = square / 10;
+	    }
+	    System.out.println("Reverse Number:"+p);
+	    int square_reverse = (int) Math.sqrt(p);
+	    System.out.println("Square root of Reverse Number:"+square_reverse);
+	    while(square_reverse > 0){
+	        rem = square_reverse % 10;
+	        s = s * 10 + rem;
+	        square_reverse = square_reverse / 10;
+	    }
+	    System.out.println("Square root of  reverse number of reverse:" +s);
+	    if(s == n){
+	        System.out.println("The given number is Apudanp Number");
+	    }
+	    else{
+	        System.out.println("The given number is not an Apudanp Number");
+	    }
+	}
+}
+
+
+
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int n1 = scan.nextInt();
+	    //int n2 = scan.nextInt();
+	    int sum =0;
+	    for(int i = 1; i <= n1 / 2; i++){
+	        if (n1 % i == 0){
+	            sum = sum + i;
+	           // System.out.print(i);
+	        }
+	    }
+	    System.out.println(sum);
+	}
+}
+
+
+
+
+DAY - 3
+
+
+1) square shape
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int n = scan.nextInt();
+	    for(int i = 1; i <= n; i++){
+	        for(int j = 1; j <= n; j++){
+	            System.out.print("* ");
+	        }
+	        System.out.println();
+	    }
+	}
+}
+
+
+2)rectangle shape
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int n = scan.nextInt();
+	    int m = scan.nextInt();
+	    for(int i = 1; i <= n; i++){
+	        for(int j = 1; j <= m; j++){
+	            System.out.print("* ");
+	        }
+	        System.out.println();
+	    }
+	}
+}
+
+
+3)Right angle triangle
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int n = scan.nextInt();
+	    for(int i = 1; i <= n; i++){
+	        for(int j = 1; j <= i; j++){
+	            System.out.print("* ");
+	        }
+	        System.out.println();
+	    }
+	}
+}
+
+4) Hallow square
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int n = scan.nextInt();
+	    for(int i = 1; i <= n; i++){
+	        for(int j = 1; j <= n; j++){
+	            if( i==1 || i==n || j==1 || j==n){
+	                 System.out.print("* ");
+	            }
+	            else{
+	                System.out.print("  ");
+	            }
+	        }
+	        System.out.println();
+	    }
+	}
+}
+
+5)Mirror right angle
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int n = scan.nextInt();
+	    for(int i = 1; i <= n; i++){
+	        for(int space=1; space <= n-i; space++){
+	            System.out.print("  ");
+	        }
+	        for(int j = 1; j <=i; j++){
+	           System.out.print("* ");
+	        }
+	        System.out.println();
+	    }
+	}
+}
+
+6)inverted mirror right angle
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int n = scan.nextInt();
+	    for(int i = n; i >= 1; i--){
+	        for(int space=1; space <= n-i; space++){
+	            System.out.print("  ");
+	        }
+	        for(int j = 1; j <=i; j++){
+	           System.out.print("* ");
+	        }
+	        System.out.println();
+	    }
+	}
+}
+
+
+7) Left arrow
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int n = scan.nextInt();
+	    for(int i = 1; i <= n; i++){
+	        for(int space=1; space <= n-i; space++){
+	            System.out.print("  ");
+	        }
+	        for(int j = 1; j <=i; j++){
+	           System.out.print("* ");
+	        }
+	        System.out.println();
+	    }
+	    for(int i = n-1; i >= 1; i--){
+	        for(int space=1; space <= n-i; space++){
+	            System.out.print("  ");
+	        }
+	        for(int j = 1; j <=i; j++){
+	           System.out.print("* ");
+	        }
+	        System.out.println();
+	    }
+
+	}
+}
+
+8) Right arrow
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int n = scan.nextInt();
+	    for(int i = 1; i <= n; i++){
+	        for(int j = 1; j <= i; j++){
+	            System.out.print("* ");
+	        }
+	        System.out.println();
+	    }
+	    for(int i = n-1; i >= 1; i--){
+	        for(int j = 1; j <=i; j++){
+	           System.out.print("* ");
+	        }
+	        System.out.println();
+	    }
+	}
+}
+
+9) Diamond ( left arrow remove the one space)
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int n = scan.nextInt();
+	    for(int i = 1; i <= n; i++){
+	        for(int space=1; space <= n-i; space++){
+	            System.out.print(" ");
+	        }
+	        for(int j = 1; j <=i; j++){
+	           System.out.print("* ");
+	        }
+	        System.out.println();
+	    }
+	    for(int i = n-1; i >= 1; i--){
+	        for(int space=1; space <= n-i; space++){
+	            System.out.print(" ");
+	        }
+	        for(int j = 1; j <=i; j++){
+	           System.out.print("* ");
+	        }
+	        System.out.println();
+	    }
+	}
+}
+
+
+10) Triangle
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int n = scan.nextInt();
+	    for(int i = 1; i <= n; i++){
+	        for(int space=1; space <= n-i; space++){
+	            System.out.print("  ");
+	        }
+	        for(int j = 1; j <=(2 * i)-1; j++){
+	           System.out.print("* ");
+	        }
+	        System.out.println();
+	    }
+	    
+	}
+}
+
+11) Inverted triangle
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int n = scan.nextInt();
+	    for(int i = n; i >= 1; i--){
+	        for(int space=1; space <= n-i; space++){
+	            System.out.print("  ");
+	        }
+	        for(int j = 1; j <=(2 * i)-1; j++){
+	           System.out.print("* ");
+	        }
+	        System.out.println();
+	    }
+	    
+	}
+}
+
+12) Hallow triangle
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int n = scan.nextInt();
+	    for(int i = 1; i <= n; i++){
+	        for(int space=1; space <= n-i; space++){
+	            
+	            System.out.print("  ");
+	        }
+	        for(int j = 1; j <=(2 * i)-1; j++){
+	            if(i==1 || i==n || j==1|| j==(2 * i)-1){
+	                 System.out.print("* ");
+	            }
+	            else{
+	                System.out.print("  ");
+	            }
+	        }
+	        System.out.println();
+	    }
+	    
+	}
+}
+
+13) Hallow diamond
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int n = scan.nextInt();
+	    for(int i = 1; i <= n; i++){
+	        for(int space=1; space <= n-i; space++){
+	            
+	            System.out.print("  ");
+	        }
+	        for(int j = 1; j <=(2 * i)-1; j++){
+	            if(i==1 || i==0 || j==1|| j==(2 * i)-1){
+	                 System.out.print("* ");
+	            }
+	            else{
+	                System.out.print("  ");
+	            }
+	        }
+	        System.out.println();
+	    }
+	    for(int i = n-1; i >= 1; i--){
+	        for(int space=1; space <= n-i; space++){
+	            
+	            System.out.print("  ");
+	        }
+	        for(int j = 1; j <=(2 * i)-1; j++){
+	            if(i==1 || i==n || j==1|| j==(2 * i)-1){
+	                 System.out.print("* ");
+	            }
+	            else{
+	                System.out.print("  ");
+	            }
+	        }
+	        System.out.println();
+	    }
+	    
+	}
+}
+
+14) pascal or Floyd triangle
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int n = scan.nextInt();
+	    int k = 1;
+	    for(int i = 1; i <= n; i++){
+	        for(int j = 1; j <= i; j++){
+	            System.out.print(k+" ");
+	            k++;
+	        }
+	        System.out.println();
+	    }
+	}
+}
+
+
+
+
+
+OOPS
+
+
+2) write a rectangle class with attributs length and breadth incude a method are that return area, a method parameter that return the perimeter.
+
+import java.util.*;
+public class rectangle{
+    int area(int l , int w){
+       return l*w;
+    }
+    int peri(int l , int w){
+        return 2 * (l+w);
+    }
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+        int l = s.nextInt();
+        int w = s.nextInt();
+	    rectangle r = new rectangle();
+	    int area = r.area(l,w);
+	    int perimeter = r.peri(l,w);
+	    System.out.println("Area:"+area);
+	    System.out.println("perimeter:"+perimeter);
+	}	    
+} 
+
+
+DAY-3
+
+
+
+1) Simple interest using contructor parameter
+
+lass simple{
+    double p, n,r;
+    simple(double p, double n, double r){
+        this.p = p;
+        this.n = n;
+        this.r = r;
+    }
+    void interest(){
+        System.out.println("Simple interest:"+(p*n*r/100));
+    }
+}
+public class Main{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    System.out.print("Enter principle amount:");
+	    double p = scan.nextDouble();
+	    System.out.print("Enter Number of time:");
+	    double n = scan.nextDouble();
+	    System.out.print("Enter Rate of interest:");
+	    double r = scan.nextDouble();
+	    simple s = new simple(p,n,r);
+	    s.interest();
+	}
+}
+
+2) Negation sum
+
+import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int n = scan.nextInt();
+	    System.out.println(~n);
+	}
+}
+
+3) access modifires
+
+//Public Access Modifier
+/*
+class Teacher {
+    public String name;
+    
+    public void teach() {
+        System.out.println(name + " is teaching.");
+    }
+}
+
+class Student {
+    public String studentName;
+
+    public void study() {
+        System.out.println(studentName + " is studying.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Teacher teacher = new Teacher();
+        teacher.name = "Mr.Sri";  // Accessing public variable
+        teacher.teach();  // Accessing public method
+
+        Student student = new Student();
+        student.studentName = "Ram";  // Accessing public variable
+        student.study();  // Accessing public method
+    }
+}*/
+/*
+//Private Access Modifier:
+class Teacher {
+    private String name;  // This cannot be accessed from outside the class
+    
+    private void teach() {
+        System.out.println(name + " is teaching.");
+    }
+    
+    public void setName(String name) {
+        this.name = name;  // Setting the value using a public method
+    }
+
+    public void getName() {
+        System.out.println(name);  // Getting the value using a public method
+    }
+}
+
+class Student {
+    private String studentName;
+    
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
+    }
+
+    public void study() {
+        System.out.println(studentName + " is studying.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Teacher teacher = new Teacher();
+        teacher.setName("Mr. Sri");  // Accessing private variable through a setter method
+        teacher.getName();  // Accessing private variable through a getter method
+
+        Student student = new Student();
+        student.setStudentName("Ram");  // Accessing private variable through a setter method
+        student.study();  // Accessing public method
+    }
+}*/
+/*
+//Protected Access Modifier:
+class Teacher {
+    protected String name;
+
+    protected void teach() {
+        System.out.println(name + " is teaching.");
+    }
+}
+
+class Student extends Teacher {
+    public void study() {
+        name = "Mr. Sri";  // Accessing protected variable from superclass
+        teach();  // Accessing protected method from superclass
+        System.out.println("Student is studying.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {//Public Access Modifier
+/*
+class Teacher {
+    public String name;
+    
+    public void teach() {
+        System.out.println(name + " is teaching.");
+    }
+}
+
+class Student {
+    public String studentName;
+
+    public void study() {
+        System.out.println(studentName + " is studying.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Teacher teacher = new Teacher();
+        teacher.name = "Mr.Sri";  // Accessing public variable
+        teacher.teach();  // Accessing public method
+
+        Student student = new Student();
+        student.studentName = "Ram";  // Accessing public variable
+        student.study();  // Accessing public method
+    }
+}*/
+/*
+//Private Access Modifier:
+class Teacher {
+    private String name;  // This cannot be accessed from outside the class
+    
+    private void teach() {
+        System.out.println(name + " is teaching.");
+    }
+    
+    public void setName(String name) {
+        this.name = name;  // Setting the value using a public method
+    }
+
+    public void getName() {
+        System.out.println(name);  // Getting the value using a public method
+    }
+}
+
+class Student {
+    private String studentName;
+    
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
+    }
+
+    public void study() {
+        System.out.println(studentName + " is studying.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Teacher teacher = new Teacher();
+        teacher.setName("Mr. Sri");  // Accessing private variable through a setter method
+        teacher.getName();  // Accessing private variable through a getter method
+
+        Student student = new Student();
+        student.setStudentName("Ram");  // Accessing private variable through a setter method
+        student.study();  // Accessing public method
+    }
+}*/
+/*
+//Protected Access Modifier:
+class Teacher {
+    protected String name;
+
+    protected void teach() {
+        System.out.println(name + " is teaching.");
+    }
+}
+
+class Student extends Teacher {
+    public void study() {
+        name = "Mr. Sri";  // Accessing protected variable from superclass
+        teach();  // Accessing protected method from superclass
+        System.out.println("Student is studying.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student student = new Student();
+        student.study();
+    }
+}*/
+
+//Default Access Modifier
+
+class Teacher {
+    String name;  // Default access modifier
+    
+    void teach() {  // Default access modifier
+        System.out.println(name + " is teaching.");
+    }
+}
+
+class Student {
+    public void study() {
+        Teacher teacher = new Teacher();
+        teacher.name = "Mr. Sri";  // Accessing default variable within the same package
+        teacher.teach();  // Accessing default method within the same package
+        System.out.println("Student is studying.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student student = new Student();
+        student.study();
+    }
+}
+
+
+//Public Access Modifier
+/*
+class Teacher {
+    public String name;
+    
+    public void teach() {
+        System.out.println(name + " is teaching.");
+    }
+}
+
+class Student {
+    public String studentName;
+
+    public void study() {
+        System.out.println(studentName + " is studying.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Teacher teacher = new Teacher();
+        teacher.name = "Mr.Sri";  // Accessing public variable
+        teacher.teach();  // Accessing public method
+
+        Student student = new Student();
+        student.studentName = "Ram";  // Accessing public variable
+        student.study();  // Accessing public method
+    }
+}*/
+/*
+//Private Access Modifier:
+class Teacher {
+    private String name;  // This cannot be accessed from outside the class
+    
+    private void teach() {
+        System.out.println(name + " is teaching.");
+    }
+    
+    public void setName(String name) {
+        this.name = name;  // Setting the value using a public method
+    }
+
+    public void getName() {
+        System.out.println(name);  // Getting the value using a public method
+    }
+}
+
+class Student {
+    private String studentName;
+    
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
+    }
+
+    public void study() {
+        System.out.println(studentName + " is studying.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Teacher teacher = new Teacher();
+        teacher.setName("Mr. Sri");  // Accessing private variable through a setter method
+        teacher.getName();  // Accessing private variable through a getter method
+
+        Student student = new Student();
+        student.setStudentName("Ram");  // Accessing private variable through a setter method
+        student.study();  // Accessing public method
+    }
+}*/
+/*
+//Protected Access Modifier:
+class Teacher {
+    protected String name;
+
+    protected void teach() {
+        System.out.println(name + " is teaching.");
+    }
+}
+
+class Student extends Teacher {
+    public void study() {
+        name = "Mr. Sri";  // Accessing protected variable from superclass
+        teach();  // Accessing protected method from superclass
+        System.out.println("Student is studying.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student student = new Student();
+        student.study();
+    }
+}*/
+
+//Default Access Modifier
+
+class Teacher {
+    String name;  // Default access modifier
+    
+    void teach() {  // Default access modifier
+        System.out.println(name + " is teaching.");
+    }
+}
+
+class Student {
+    public void study() {
+        Teacher teacher = new Teacher();
+        teacher.name = "Mr. Sri";  // Accessing default variable within the same package
+        teacher.teach();  // Accessing default method within the same package
+        System.out.println("Student is studying.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student student = new Student();
+        student.study();
+    }
+}
+
+        Student student = new Student();
+        student.study();
+    }
+}*/
+
+//Default Access Modifier
+
+class Teacher {
+    String name;  // Default access modifier
+    
+    void teach() {  // Default access modifier
+        System.out.println(name + " is teaching.");
+    }
+}
+
+class Student {
+    public void study() {
+        Teacher teacher = new Teacher();
+        teacher.name = "Mr. Sri";  // Accessing default variable within the same package
+        teacher.teach();  // Accessing default method within the same package
+        System.out.println("Student is studying.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student student = new Student();
+        student.study();
+    }
+}
+
+
+
+4) Bank program
+
+import java.util.*;
+class Bank_account{
+    int account_no=12345678, balance=50000, d, w, amt, with,dis;
+    Scanner s = new Scanner(System.in);
+
+    Bank_account(){
+        System.out.println("Account Number:"+account_no);
+        System.out.println("Balance:"+balance);
+    }
+    void deposit(){
+        System.out.print("Deposit Amount:");
+        d = s.nextInt();
+        amt = balance+d;
+    }
+    void withdraw(){
+        System.out.print("Withdraw Amount:");
+        w = s.nextInt();
+    }
+    void display(){
+        dis = amt-w;
+        System.out.println("The current balance is:"+dis);
+    }
+}
+public class Main {
+	public static void main(String[] args) {
+		Bank_account b = new Bank_account();
+		b.deposit();
+		b.withdraw();
+		b.display();
+	}
+}
+
+
+5) Triperfect
+
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int n = scan.nextInt();
+		int sum = 0, ans;
+		for(int i = 1; i <= n; i++){
+		    if( n % i == 0){
+		        System.out.print(i+ " ");
+		        sum = sum + i;
+		    }
+		}
+		System.out.println();
+		System.out.println("Sum of factors:"+sum);
+		ans = n * 3;
+		if(ans == sum){
+		    System.out.println("The given number is triperfect");
+		}
+		else{
+		    System.out.println("The given number is not a triperfect");
+		}
+	}
+}
+
+
+DAY - 5
+
+
+1) Static keyword using function
+
+import java.util.*;
+public class Main{
+    static int a, b, c, d, e, f;
+    static void initialize(){
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter the first number: ");
+        a = s.nextInt();
+        System.out.print("Enter the second number: "); 
+        b = s.nextInt();
+    }
+    static void add(){
+        c = a+b;
+    }
+    static void sub(){
+        d = a-b;
+    }
+    static void mul(){
+        e = a*b;
+    }
+    static void div(){
+        f = a/b;
+    }
+    static void display(){
+       System.out.println("Addition:"+c); 
+       System.out.println("Subtraction:"+d);
+       System.out.println("Multiplication:"+e);
+       System.out.println("Division:"+f);
+    }
+	public static void main(String[] args) {
+	    initialize();
+	    add();
+	    sub();
+	    mul();
+	    div();
+	    display();
+	}
+}
+
+
+
+2) area of triangle
+
+import java.util.*;
+class be {
+	private int b, h;
+	public void ansx(int base,int height) {
+		b = base;
+		h = height;
+	}
+	public void ansy(){
+	    int c = b * h / 2;
+	    System.out.println("Triangle:"+c);
+	}
+}
+public class Main {
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+        int  b = s.nextInt();
+        int h = s.nextInt();
+	    System.out.println("Breath:"+b);
+	    System.out.println("Height"+h);
+		be d = new be();
+		d.ansx(b,h);
+		d.ansy();
+	}
+}
+
+
+3) Even number should be print of -1 and the odd  number should be print of +1
+
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+	   for(int i= 1; i<=100;i++){
+	       if(i % 2 != 0){
+	           System.out.println(i+1);
+	       }
+	       else{
+	            System.out.println(i-1);
+	       }
+	   }
+	}
+}
+
+
+4) Array min and max finding
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        int a[] = {1,11,22,3,2,5,6,10,8};
+        int n = a.length;
+        Arrays.sort(a);
+        int min = a[0], max = a[n-1], minindex, maxindex;
+        System.out.println("sorted Array:"+Arrays.toString(a));
+        System.out.println("Minimum:"+min);
+        System.out.println("maximum:"+max);
+    }
+}
+
+
+5) Array user input to find the min and max of the index
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of elements: ");
+        int n = scanner.nextInt();
+        int[] a = new int[n];
+        int[] originalIndices = new int[n];
+        System.out.println("Enter " + n + " elements:");
+        for (int i = 0; i < n; i++) {
+            a[i] = scanner.nextInt();
+            originalIndices[i] = i;  
+        }
+        Arrays.sort(a);
+        int min = a[0];
+        int max = a[a.length - 1];
+        int minIndex = -1;
+        int maxIndex = -1;
+        for (int i = 0; i < n; i++) {
+            if (minIndex == -1 && a[i] == min) {
+                minIndex = originalIndices[i];
+            }
+            if (maxIndex == -1 && a[i] == max) {
+                maxIndex = originalIndices[i];
+            }
+        }
+        System.out.println("Sorted array: " + Arrays.toString(a));
+        System.out.println("Minimum value: " + min + " occurs at index " + minIndex);
+        System.out.println("Maximum value: " + max + " occurs at index " + maxIndex);
+        scanner.close();
+    }
+}
+
+6) find whether given element is present in the array or not if yes print true else false.
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter the number of elements in the array: ");
+        int a = s.nextInt();
+        
+        int[] b = new int[a]; 
+        System.out.print("Enter the elements of the array:");
+        for (int i = 0; i < b.length; i++) {
+            b[i] = s.nextInt();
+        }
+        
+        System.out.println("Entr the target value:");
+        int target = s.nextInt();
+        boolean found = false;
+        for (int i = 0; i < b.length; i++) {
+            if (target == b[i]) {
+                found = true;
+                break;  
+            }
+        }
+        
+        if (found) {
+            System.out.println("True");
+        } else {
+            System.out.println("False");
+        }
+    }
+}
+
+7) araange the element in ascending order of using inbuilt function
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter the number of elements in the array: ");
+        int a = s.nextInt();
+        
+        int[] b = new int[a]; 
+        System.out.print("Enter the elements of the array:");
+        for (int i = 0; i < b.length; i++) {
+            b[i] = s.nextInt();
+        }
+        Arrays.sort(b);
+        System.out.println("sorted array:"+Arrays.toString(b));
+    }
+}
+
+8)araange the element in ascending order of  without using inbuilt function
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter the number of elements in the array: ");
+        int a = s.nextInt();
+        
+        int[] b = new int[a]; 
+        System.out.print("Enter the elements of the array:");
+        for (int i = 0; i < b.length; i++) {
+            b[i] = s.nextInt();
+        }
+       
+        for(int i = 0; i < b.length-1;i++){
+            for(int j=0; j < b.length-1-i;j++){
+                if(b[j] > b[j+1]){
+                    int temp = b[j];
+                    b[j] = b[j+1];
+                    b[j+1] = temp;
+                }
+            }
+        }
+        System.out.println("sorted array:"+Arrays.toString(b));
+    }
+}
+
+
+9) remove the duplicate element in the array
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter the number of elements in the array: ");
+        int a = s.nextInt();
+        int j;
+        int[] b = new int[a]; 
+        System.out.print("Enter the elements of the array:");
+        for (int i = 0; i < b.length; i++) {
+            b[i] = s.nextInt();
+        }
+       
+        for(int i = 0; i < b.length-1;i++){
+            for(j=0; j < b.length-1-i;j++){
+                if(b[j] > b[j+1]){
+                    int temp = b[j];
+                    b[j] = b[j+1];
+                    b[j+1] = temp;
+                }
+            }
+        }
+        //System.out.println("sorted array:"+Arrays.toString(b));
+        System.out.print("without duplicate:");
+        System.out.print(b[0] + " ");
+        for(int i = 1 ; i < a;i++){
+            if(b[i] != b [i-1] ){
+                System.out.print(b[i] + " ");
+            }
+        }
+    }
+}
+
+10) min and max
+
+import java.util.*;
+public class Main
+{
+public static void main(String[] args) {
+   int a[] = {11,23,3,14,52};
+   for(int i = 0;i<a.length;i++){
+       System.out.print(a[i] +" ");
+   }
+   System.out.println();
+   int max = a[0];
+   int min = a[0];
+   for(int i = 0;i<a.length;i++){
+       if(max<a[i]){
+           max = a[i];
+       }
+       if(min>a[i]){
+           min = a[i];
+       }
+   }
+    System.out.println(max);
+    System.out.println(min);
+}
+
+11) second max number
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter the number of elements in the array: ");
+        int a = s.nextInt();
+        
+        int[] b = new int[a]; 
+        System.out.print("Enter the elements of the array:");
+        for (int i = 0; i < b.length; i++) {
+            b[i] = s.nextInt();
+        }
+        Arrays.sort(b);
+        System.out.println("sorted array:"+Arrays.toString(b));
+        System.out.println("Maximum:"+b[a-1]);
+        System.out.println("Minimum:"+b[0]);
+        System.out.println("Second largest:"+b[a-2]);
+    }
+}
+
+12) check the given array is sorted or not
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        int a1[] = {1,2,3,4,5};
+        int a2[] = Arrays.copyOf(a1,a1.length);
+        Arrays.sort(a1);
+        if(Arrays.equals(a1,a2)){
+            System.out.println("Sorted");
+        }
+        else{
+            System.out.println("not sorted");
+        }
+    }
+}
+
+
+DAY - 7
+
+
+STRINGS METHODS
+
+1) CONCAT
+
+import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+	    String str1 = "Hello ";
+	    String str2 = "Dejassha";
+		System.out.println(str1+str2);
+	}
+}
+
+			(or)
+
+import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    System.out.println("Entr the first word:");
+	    String str1 = s.nextLine();
+	    System.out.println("Entr the second word:");
+	    String str2 = s.nextLine();
+		System.out.println(str1+str2);
+	}
+}
+
+2) LENGTH
+
+import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    System.out.println("Entr the first word:");
+	    String str1 = s.nextLine();
+	    int i = str1.length();
+		System.out.println("The length of the word:"+i);
+	}
+}
+
+3)CHARAT
+
+import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    System.out.println("Entr the first word:");
+	    String str1 = s.nextLine();
+	    char c = str1.charAt(2);
+	    System.out.println("Index position of the word:"+c);
+	}
+}
+
+4) BOOLEAN
+
+import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    System.out.println("Entr the first word:");
+	    String str1 = s.nextLine();
+	    System.out.println("Entr the second word:");
+	    String str2 = s.nextLine();
+	    if(str1.equals(str2)){
+	        System.out.println("True");
+	    }
+	    else{
+	        System.out.println("False");
+	    }
+	}
+}
+
+			(OR) using ignorecase
+
+import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    System.out.println("Entr the first word:");
+	    String str1 = s.nextLine();
+	    System.out.println("Entr the second word:");
+	    String str2 = s.nextLine();
+	    if(str1.equalsIgnoreCase(str2)){
+	        System.out.println("True");
+	    }
+	    else{
+	        System.out.println("False");
+	    }
+	}
+}
+
+5) UPPER CASE & LOWER CASE
+
+import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    System.out.println("Entr the first word:");
+	    String str1 = s.nextLine();
+	    System.out.println("Entr the second word:");
+	    String str2 = s.nextLine();
+	    System.out.println("First word:"+str1.toLowerCase());
+	    System.out.println("Second word:"+str2.toUpperCase());
+	}
+}
+
+6) INDEX POSITION
+
+import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    System.out.println("Entr the first word:");
+	    String str1 = "HELLO WORLD";
+	    System.out.println("Index position:"+str1.indexOf('H'));
+	}
+}
+
+7) LASTINDEX
+
+import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    String str1 = "HELLO WORLD";
+	    System.out.println("Index position:"+str1.lastIndexOf('O'));
+	}
+}
+
+8)STARTWITH & ENDSWITH
+
+import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    String str1 = "HELLO WORLD";
+	    System.out.println("start with:"+str1.startsWith("HELLO"));
+	    String str2 = "hello world";
+	    System.out.println("end with:"+str2.endsWith("world"));
+	}
+}
+
+9) REVERSE A STRING
+
+import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    System.out.println("Enter the word:");
+	    String str = s.nextLine();
+	    String rev = " ";
+	    for(int i = str.length()-1;i>=0;i--){
+	        rev = rev + str.charAt(i);
+	    }
+	    System.out.println("REVERSED:"+rev);
+	}
+}
+
+10)FIND THE OCCURENCE OF A CHARACTER IN STRING
+
+import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    String str= "dejassha";
+	    int count = 0;
+	    char ch = 'a';
+	    for(int i = 0;i<str.length();i++){
+	        if(str.charAt(i) == ch){
+	            count++;
+	        }
+	    }
+	    System.out.println("COUNT:"+count);
+	}
+}
+
+11) ALPHABET
+
+import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    String str= "dejassha";
+	    if(str.matches(".*[a-zA-Z]+.*")){
+	        System.out.println("contains");
+	    }
+	    else{
+	        System.out.println("Not");
+	    }
+	}
+}  
+
+ 			(OR) numbers
+
+import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    String str= "dejassha02";
+	    if(str.matches("[a-zA-Z]+")){
+	        System.out.println("contains");
+	    }
+	    else{
+	        System.out.println("Not");
+	    }
+	}
+}
+
+12) CONVERT CHAR TO STRING
+
+import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+	    char[] charArray = {'D','E','J','A','S','S','H','A'};
+	    String str = new String(charArray);
+	    System.out.println(str);
+	}
+}
+
+
+DaAY - 8
+
+2) LAST WORD LENGTH
+
+import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		String str = s.nextLine();
+		int n = str.length(),count=0;
+		for(int i=n-1;i>=0;i--){
+		    if(str.charAt(i) == ' '){
+		        break;
+		    }
+		    count++;
+		}
+		System.out.println(count);
+	}
+}
+
+DAY-9
+
+1)insert the element, insert the element at first, and the specific position
+
+import java.util.*;
+class Node{  //step-1 creating a node
+    int data;
+    Node next;
+    
+    Node(int data){  //step-2 create a contructor of using this keyword avoid the confusion of values
+        this.data=data;
+        this.next=null;
+    }
+}
+class linkedList{  //step-4 want to insert the element to create a class with head and tail
+    Node head, tail;
+    public void insert(int data){  
+        Node newnode = new Node(data);  // create a new node 
+        //newnode.next=head; // inserting the newnode the newnode will be the head after the inserting all the element
+                            // the first node will be head node
+        if(head==null){     // if head and tail will be in the current node head= newnode and tail=newnode
+            head = newnode;
+            tail = newnode;
+        }
+        else{                   
+            tail.next = newnode;
+            tail = newnode;
+        }
+    }
+    public void insertAtbeg(int data){  // INSERT AT BEGIN
+        Node newnode = new Node(data);
+        newnode.next = head;
+        head = newnode;
+        System.out.println("Insert at begining");
+    }
+    public void insertSpecific(int pos, int data){
+        Node newnode = new Node(data);
+        Node temp = head;
+        for(int i=0;i<pos-1;i++){
+            temp = temp.next;
+            newnode.next= temp.next;
+            temp.next=newnode;
+        }
+    }
+    public void display(){
+        Node temp = head;
+        while(temp != null){
+            System.out.println(temp.data);
+            temp = temp.next;
+        }
+        //if(temp==null){
+            //System.out.println("EMPTY");
+        //}
+    }
+}
+
+public class Main{  // step-3  create a Main class for oject creating and calling the methods
+	public static void main(String[] args) {
+	    linkedList l = new linkedList();  // step-5 create a object for the inserting class
+	    l.insert(10);
+	    l.insert(20);
+	    l.insert(30);
+	    l.insertAtbeg(40);
+	    l.insertSpecific(2,50);
+	    l.display();
+	}
+}
+
+2)insert end, insert first, delete begin, delete end
+
+import java.util.*;
+class Node{
+    int data;
+    Node next;
+    Node(int data){
+        this.data=data;
+        this.next=null;
+    }
+}
+class LL{
+    Node head,tail;
+    public void insert(int data){
+        Node newnode = new Node(data);
+        if(head==null){
+            head = newnode;
+            tail = newnode;
+        }
+        else{
+            tail.next=newnode;
+            tail=newnode;
+        }
+    }
+    public void insertAtbeg(int data){
+        Node newnode = new Node(data);
+            newnode.next = head;
+            head = newnode;
+    }
+    public void deleteAtBeg(){
+        if(head != null){
+            head = head.next;
+        }
+    }
+    public void deleteAtend(){
+        Node temp = head;
+        while(temp.next.next != null){
+            temp = temp.next;
+        }
+        temp.next = null;
+    }
+    public void display(){
+        Node temp = head;
+        while(temp != null){
+            System.out.println(temp.data);
+            temp = temp.next;
+        }
+    }
+}
+public class Main{
+    public static void main(String[]args){
+        LL obj = new LL();
+        obj.insert(100);
+        obj.insert(200);
+        obj.insert(300);
+        obj.insert(400);
+        obj.insertAtbeg(500);
+        obj.deleteAtBeg();
+        obj.deleteAtend();
+        obj.display();
+    }
+}
+
+
+DAY-10
+
+1) DOUBLY LL
+
+package practice_project;
+
+import java.util.*;
+class Node{
+    int data;
+    Node next;
+    Node prev;
+    Node(int data){
+        this.data=data;
+        this.next=null;
+        this.prev=null;
+    }
+}
+class DLL{
+    Node head,tail;
+    public void insertAtBeg(int data){ //INSERT AT BEGINING
+        Node newnode = new Node(data);
+        if(head == null){
+            head= newnode;
+            tail=newnode;
+        }
+        else{
+            newnode.next=head;
+            head.prev=newnode;
+            head=newnode;
+        }
+    }
+    public void insertAtend(int data){  //INSERT AT END
+        Node newnode = new Node(data);
+        if(tail==null){
+            head = newnode;
+            tail=newnode;
+        }
+        else{
+            tail.next=newnode;
+            newnode.prev=tail;
+            tail=newnode;
+        }
+    }
+    public void deleteAtBeg(){  //DELETE AT BEGINING
+        if(head==null){
+            System.out.println("List is empty");
+        }
+        if(head == tail){
+            head = null;
+            tail = null;
+        }
+        else{
+            head=head.next;
+            head.prev=null;
+        }
+    }
+    public void deleteAtend(){	//DELETE AT END
+    	Node temp = head;
+    	if(temp==null) {
+    		System.out.println("List is empty");
+    	}
+    	while(temp.next.next != null) {
+    		temp = temp.next;
+    	}
+    	temp.next=null;
+    }
+    public void specificpos(int pos, int data) { 	//	SPECIFIC POSITION TO INSERT THE ELEMENT
+        Node newnode = new Node(data);
+        Node temp = head;
+        if (pos == 0) {
+            insertAtBeg(data);
+            return;
+        }
+        for (int i = 0; temp != null && i < pos - 1; i++) {
+            temp = temp.next;
+        }
+        if (temp == null) {
+            System.out.println("Position out of bounds");
+            return;
+        }
+        newnode.next = temp.next;
+        newnode.prev = temp;
+        if (temp.next != null) {
+            temp.next.prev = newnode;
+        }
+        temp.next = newnode;
+        if (newnode.next == null) {
+            tail = newnode;
+        }
+    }
+
+    public void reverse(){  //REVERSE THE ELMENT 
+    	Node prev=null;
+    	Node current=head;
+    	Node next=null;
+    	while(current != null) {
+    		next=current.next;
+    		current.next=prev;
+    		prev=current;
+    		current=next;
+    	}
+    	head=prev;
+    }
+    
+    public void display(){	//DISPLAY THE NODE
+        Node temp=head;
+        if(temp==null){
+            System.out.println("List is empty");
+        }
+        while (temp != null) {
+            System.out.print(temp.data);
+            if (temp.next != null) {
+                System.out.print("<-->");
+            }
+            temp = temp.next;
+        }
+        System.out.println();
+    }
+}
+
+public class doubly {
+
+	public static void main(String[] args) {
+		DLL link = new DLL();
+	    link.insertAtBeg(100); //1
+	    link.insertAtBeg(400); //2
+	    link.insertAtBeg(500); //3
+	    link.insertAtend(200); //1
+	    link.insertAtend(300); //2
+	    link.insertAtend(600); //3
+	    link.specificpos(2, 900);
+	    //link.deleteAtBeg();
+	    //link.deleteAtend();
+	    //link.reverse();
+	    link.display();
+
+	}
+
+}
+
+
+DAY-11
+
+1) STACK
+
+package practice_project;
+import java.util.*;
+class stack{
+	int a[] = new int[5];
+	int top = -1;
+	public void push(int data) {
+		if(top==a.length-1) {
+			System.out.println("Stack is full");
+		}
+		else {
+			top++;
+			System.out.println((a[top]=data)+ " ");
+		}
+	}
+	public void pop() {
+		if(top==-1) {
+			System.out.println("Stack is empty");
+		}
+		else {
+			top--;
+		}
+	}
+	public void peak(){
+		if(top==-1) {
+			System.out.println("Stack is empty");
+		}
+		else{
+			System.out.println("Peak:"+a[top]);
+		}
+	}
+	public void display() {
+		System.out.print("Display the elements:"+ " ");
+		for(int i=top;i>=0;i--) {
+			System.out.println(+ a[i]);
+		}
+	}
+}
+public class Main {
+	public static void main(String[] args) {
+		stack s = new stack();
+		s.push(10);
+		s.push(20);
+		s.push(30);
+		s.push(40);
+		s.pop();
+		s.peak();
+		s.display();
+	}
+
+2)QUEUE
+
+package practice_project;
+import java.util.*;
+class q{
+	int a[] = new int[5];
+
+	int front = -1;
+
+	int rear = -1;
+
+	public void Push(int data) {
+
+		if(rear == a.length-1) {
+
+			System.out.println("Queue is full");
+
+		}
+
+		else {
+
+			if(front == -1) {
+
+				front = 0;
+
+			}
+
+			rear ++;
+
+			a[rear] = data; 
+
+		}
+
+	}
+
+	public void pop() {
+
+		if(front == -1 || front >rear) {
+
+			System.out.println("Queue is empty");
+
+		}
+
+		else {
+
+			System.out.println("Removed Element:" +a[front]);
+
+			front++;
+
+		}
+
+	}
+
+	public void peek() {
+
+		if(front == -1 || front>rear) {
+
+			System.out.println("Queue empty");
+
+		}
+
+		else {
+
+			System.out.println("Element at front: " +a[front]);
+
+		}
+
+	}
+
+	public void display() {
+
+		if(front == -1 || front>rear) {
+
+			System.out.println("Queue empty");
+
+		}
+
+		else {
+
+			System.out.println("Display Elements");
+
+			for(int i = front;i<=rear;i++) {
+
+				System.out.println(a[i]);
+
+			}
+
+		}
+
+	}
+}
+public class queue {
+	public static void main(String[] args) {
+		q m= new q();
+		m.Push(10);
+
+		m.Push(20);
+
+		m.Push(30);
+
+		m.Push(40);
+
+		m.display();
+
+		m.peek();
+
+		m.pop();
+		m.display();
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
