@@ -1,0 +1,93 @@
+RECURRSION
+
+
+1) FACTORIAL USING RECRUSIVE FUNCTION
+
+package practice_project;
+import java.util.*;
+public class RECURSIVE {
+	public static int factorial(int n) {
+		if(n==0) {
+			return 1;
+		}
+		return n * factorial(n-1);
+	}
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		System.out.print("Enter the number:");
+		int number = s.nextInt();
+		System.out.println("Factorial:"+factorial(number));
+	}
+}
+
+
+2) FABONACCI SERIES
+
+package practice_project;
+import java.util.*;
+public class RECURSIVE {
+	public static int fibanacci(int n) {
+		if(n<=1){ //Base case
+			return n;
+		}
+		return fibanacci(n-1) + fibanacci(n-2); // recursive function
+	}
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		int number = s.nextInt();
+		System.out.print("Fabnacci series:");
+		for(int i=0;i<number;i++) {
+			System.out.print(+fibanacci(i)+ " ");
+		}
+	}
+}
+
+
+3) SUM OF N NATURAL NUMBERS
+
+package practice_project;
+import java.util.*;
+public class RECURSIVE {
+	public static int sum(int n) {
+		if(n<=1){ //Base case
+			return n;
+		}
+		return n + sum(n-1) ; // recursive function
+	}
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		int number = s.nextInt();
+		System.out.print("SUM OF n NATURAL NUMBERS: ");
+		System.out.print(+sum(number));
+	}
+}
+
+
+4) PRINT NUMBER IN REVERSE ORDER
+
+import java.util.*;
+public class Main{
+    static int sum=0;
+    public static int reverse(int n){
+        if(n==0){
+            return 0;
+        }
+        int temp = n % 10;
+        sum = sum * 10 + temp;
+        reverse(n / 10);
+        return sum;
+    }
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+	    System.out.print("Enter the number:");
+	    int number = s.nextInt();
+	    System.out.println("Reverse:"+reverse(number));
+	}
+}
+
+
+5) CHECK IF A NUMBER IS PRIME OR NOT
+6) CHECK IF A NUMBER IS PALINDROME
+7) COUNT DIGITS IN A NUMBER
+8) FIND THE LENGTH OF A STRING
+9) PRINT NUMBER 1 TO N 
