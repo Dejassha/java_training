@@ -1,0 +1,161 @@
+1) BUBBLE SORT
+ 
+//SORTING
+
+import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		int n = s.nextInt();
+		int arr[] = new int[n];
+		for(int i=0;i<n;i++){
+		    arr[i] = s.nextInt();
+		}
+		BubbleSort(arr,n);
+	}
+	public static void BubbleSort(int arr[], int n){
+	    for(int i=0;i<n;i++){
+	        for(int j=0;j<n-1-i;j++){
+	            if(arr[j]>arr[j+1]){
+	                int temp = arr[j];
+	                arr[j] = arr[j+1];
+	                arr[j+1] = temp;
+	            }
+	        }
+	    }
+	    System.out.println(Arrays.toString(arr));
+	}
+}
+
+
+2)INSERTION SORT
+
+import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		int n = s.nextInt();
+		int arr[] = new int[n];
+		for(int i=0;i<n;i++){
+		    arr[i] = s.nextInt();
+		}
+		for(int i=1;i<n;i++){
+		    for(int j=i;j>0;j--){
+		        if(arr[j]<arr[j-1]){
+		            int temp = arr[j];
+		            arr[j] = arr[j-1];
+		            arr[j-1]=temp;
+		        }
+		        else{
+		            break;
+		        }
+		    }
+		}
+		for(int i=0;i<n;i++){
+		    System.out.print(arr[i]+" ");
+		}
+	}
+}
+
+3)SELECTION SORT
+
+import java.util.*;
+public class Main{
+    public static void selection_sort(int arr[]){
+        for(int i=0;i<arr.length;i++){
+            int min=i;
+            for(int j=i;j<arr.length;j++){
+                if(arr[j]<arr[i]){
+                    min=j;
+                }
+            }
+            int temp = arr[i];
+            arr[i] = arr[min];
+            arr[min] = temp;
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		int n = s.nextInt();
+		int arr[] = new int[n];
+		for(int i=0;i<n;i++){
+		    arr[i] = s.nextInt();
+		}
+		selection_sort(arr);
+	}
+} 
+
+
+
+4) SEARCHING
+
+//BINARY SEARCH
+
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		Scanner s =new Scanner(System.in);
+		System.out.print("Enter the array size:");
+		int n= s.nextInt();
+		System.out.print("Enter the elements:");
+		int arr[] = new int[n];
+		for(int i=0;i<n;i++){
+		    arr[i]=s.nextInt();
+		}
+        System.out.print("Target value:");	
+        int target = s.nextInt();
+        int start=0;
+        int end=arr.length-1;
+        int flag=0;
+        while(start <= end){
+            int mid=(start+end)/2;
+            if(arr[mid]==target){
+                System.out.println("Element is found:"+mid);
+                flag=1;
+                break;
+            }
+            else if(arr[mid]<target){
+                start=mid+1;
+            }
+            else{
+                end = mid-1;
+            }
+        }
+        if(flag==0){
+            System.out.println("Element is not found");
+        }
+	}
+}
+
+
+
+//LINEAR SEARCH
+
+
+package practice_project;
+import java.util.*;
+public class linear {
+public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		System.out.print("Enter the size:");
+		int n = s.nextInt();
+		System.out.println("Enter the elements:");
+		int arr[]=new int[n];
+		for(int i=0;i<n;i++) {
+			arr[i] = s.nextInt();
+		}
+		System.out.print("Target Value:");
+		int target = s.nextInt();
+		int flag=0;
+		for(int i=0;i<n;i++) {
+			if(arr[i]==target) {
+				System.out.println("Element found index:"+i);
+				flag=1;
+			}
+		}
+		if(flag==0) {
+			System.out.println("Element not found");
+		}
+	}
+}
