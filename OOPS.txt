@@ -1,0 +1,101 @@
+//OOPS
+
+// EXAMPLE: BANK ACCOUNT
+
+import java.util.*;
+abstract class Bank_account{    // ABSTRACTION
+    private String Account_holder_name;     // ENCAPSULATION USING PRIVATE 
+    private double balance;
+    
+    Bank_account(String Account_holder_name, double balance){    // CONSTRUCTOR USING FOR AVOID CONFUSION OF THE INPUT
+        this.Account_holder_name = Account_holder_name;
+        this.balance = balance;
+    }
+    
+    
+    public abstract void display_details();
+    public abstract void current_balance();
+    
+    
+    
+    public String getAccount_holder_name(){   ///ENCAPSULATION OF USING GET FOR USER GIVING
+        return Account_holder_name;
+    }
+    
+    public void setAccount_holder_name(String Account_holder_name){   ///ENCAPSULATION OF USING SET FOR USER GIVING DETAILUPDATING OF USING THIS KEYWORD WITHOUT AVOID THE CONFUSION OF INPUT
+        this.Account_holder_name = Account_holder_name;
+    }
+    
+    public double getbalance(){  
+        return balance;
+    }
+    
+    public void setbalance(double balance){
+        this.balance = balance;
+    }
+    
+
+    
+    public void deposit(double amount){      //PLOYMORPHISM
+        if(amount > 0){
+            balance = balance + amount;
+            System.out.println("Deposited amount:"+amount);
+        }
+        else{
+            System.out.println("Invalid amount");
+        }
+    }
+    
+  
+    
+    public void withdraw(double amount){          //POLYMORPHISM
+        if(amount > 0 && amount <= balance){
+            balance = balance - amount;
+            System.out.println("Withdrawal amount:"+amount);
+        }
+        else{
+            System.out.println("Insufficient amount");
+        }
+    }
+}
+class saving_account extends Bank_account{
+    public saving_account(String Account_holder_name, double balance){
+        super(Account_holder_name, balance);
+    }
+    
+    
+    public void display_details(){               ///@override
+        System.out.println("Savings Account:");   
+        System.out.println("Account Holder Name:"+ getAccount_holder_name());
+        System.out.println("Balance:"+getbalance());
+    }     
+    
+    
+    public void current_balance(){
+        System.out.println("Final updated of balance after the deposit and withdraw:"+ getbalance());
+    }
+}
+public class Main{
+	public static void main(String[] args) {
+	    Bank_account  b = new saving_account("Dejassha.A.S",2000);
+	    b.display_details();
+	    b.deposit(2000);
+	    b.withdraw(1000);
+	    b.display_details();
+	    b.current_balance();
+	}
+}
+
+
+
+OUTPUT:
+
+Saving Account:
+Account Holder Name: Dejassha.A.S
+Balance:2000.0
+Deposited amount:2000.0
+Withdrawal amount:1000.0
+Saving Account:
+Account Holder Name: Dejassha.A.S
+Balance:3000.0
+Final updated of balance after the deposit and withdraw:3000.0
