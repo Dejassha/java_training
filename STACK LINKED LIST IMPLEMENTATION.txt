@@ -1,0 +1,54 @@
+import java.util.*;
+class Node{
+    int data;
+    Node next;
+    Node(int data){
+        this.data=data;
+        this.next=null;
+    }
+}
+class stack{
+    Node head, tail;
+    public void push(int data){   //inset at begin
+        Node newnode = new Node(data);
+        if(head==null){
+            head=newnode;
+        }
+        else{
+            newnode.next=head;
+            head=newnode;
+        }
+    }
+    public void pop(){  //Delete at begin
+        head=head.next;
+    }
+    public void peak(){
+        if(head==null){
+            return;
+        }
+        System.out.print("peak element:"+head.data);
+    }
+    public void display(){
+        Node temp= head;
+        while(temp != null){
+            System.out.print(temp.data+" ");
+            temp= temp.next;
+        }
+        System.out.println();
+    }
+}
+public class Main{
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		stack ss = new stack();
+		int n = s.nextInt();
+		for(int i=0;i<n;i++){
+		    ss.push(s.nextInt());
+		}
+		ss.display();
+		ss.pop();
+		System.out.print("Pop the element always pop at first element:");
+		ss.display();
+		ss.peak();
+	}
+}
