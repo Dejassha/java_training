@@ -1,0 +1,65 @@
+import java.util.*;
+class stack{
+    int size;
+    int arr[];
+    int top=-1;
+    stack(int n){
+        this.size=n;
+        arr=new int[n];
+    }
+    public void push(int data){
+        if(top==size-1){
+            System.out.println("Stack is full");
+        }
+        else{
+            top++;
+            arr[top]=data;
+        }
+    }
+    public void pop(){
+        if(top==-1){
+            System.out.println("Stack is empty");
+        }
+        else{
+            top--;
+        }
+    }
+    public void peak(){
+        if(top==-1){
+            System.out.println("stack is empty");
+        }
+        else{
+            System.out.println("Peak element :"+arr[top]);
+        }
+    }
+    public void display(){
+        System.out.print("Displaying the elements: ");
+        for(int i=top;i>=0;i--){
+            System.out.print(arr[i]+" ");
+        }
+    }
+    // public boolean isFull(){
+    //     return top==size-1;
+    // }
+    // public boolean isEmpty(){
+    //     return top==-1;
+    // }
+}
+public class Main{
+    public static void main(String[]args){
+       Scanner s = new Scanner(System.in);
+       int n = s.nextInt();
+       stack st=new stack(n);
+       for(int i=0;i<n;i++){
+           st.push(s.nextInt());
+       }
+       st.display();
+       //st.pop();
+       st.display();
+       st.peak();
+       //st.push(99);
+       st.pop();
+       st.pop();st.pop();st.pop();st.pop();st.pop();
+       
+    }
+}
